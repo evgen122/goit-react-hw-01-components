@@ -1,8 +1,6 @@
-// import friends from '../data/friends.json';
 import clsx from 'clsx';
 import styles from './FriendList.module.css';
 
-// console.log(styles);
 export const FriendListItem = ({ isOnline, avatar, name }) => {
   return (
     <li className={styles.item}>

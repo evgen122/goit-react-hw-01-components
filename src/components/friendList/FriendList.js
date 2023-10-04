@@ -1,16 +1,15 @@
 import styles from './FriendList.module.css';
 import { FriendListItem } from './FriendListItem.js';
-import friends from '../../data/friends.json';
 
-export const FriendList = () => {
+export const FriendList = ({ friends }) => {
   return (
     <ul className={styles.friendList}>
-      {friends.map(card => (
+      {friends.map(({ id, avatar, name, isOnline }) => (
         <FriendListItem
-          key={card.id}
-          avatar={card.avatar}
-          name={card.name}
-          isOnline={card.isOnline}
+          key={id}
+          avatar={avatar}
+          name={name}
+          isOnline={isOnline}
         />
       ))}
     </ul>

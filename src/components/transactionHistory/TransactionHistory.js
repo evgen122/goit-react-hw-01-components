@@ -1,7 +1,6 @@
-import items from '../../data/transactions.json';
 import styles from './TransactionHistory.module.css';
 
-export const TransactionHistory = () => {
+export const TransactionHistory = ({ transaction }) => {
   return (
     <table className={styles.transactionHistory}>
       <thead>
@@ -11,12 +10,12 @@ export const TransactionHistory = () => {
           <th>Currency</th>
         </tr>
       </thead>
-      {items.map(idx => (
-        <tbody key={idx.id}>
+      {transaction.map(({ id, type, amount, currency }) => (
+        <tbody key={id}>
           <tr>
-            <td>{idx.type}</td>
-            <td>{idx.amount}</td>
-            <td>{idx.currency}</td>
+            <td>{type}</td>
+            <td>{amount}</td>
+            <td>{currency}</td>
           </tr>
         </tbody>
       ))}

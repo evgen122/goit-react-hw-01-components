@@ -1,4 +1,5 @@
 import styles from './Statistics.module.css';
+import { getRandomHexColor } from './getRandomHexColor';
 
 const styleItem = {
   display: 'flex',
@@ -16,9 +17,3 @@ export const StatisticsItem = ({ label, percentage }) => {
     </li>
   );
 };
-
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
-}
