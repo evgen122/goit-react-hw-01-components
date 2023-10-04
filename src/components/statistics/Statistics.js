@@ -1,4 +1,4 @@
-import stats from '../data/data.json';
+import stats from '../../data/data.json';
 import { StatisticsItem } from './StatisticsItem.js';
 import styles from './Statistics.module.css';
 

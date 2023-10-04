@@ -1,4 +1,4 @@
-import userInfo from '../data/user.json';
+import userInfo from '../../data/user.json';
 // import clsx from 'clsx';
 import styles from './Profile.module.css';
 // console.log(userInfo);
